@@ -1,0 +1,30 @@
+{
+    "todo_list": [
+        {
+            "priority": 1,
+            "task": "重构 auth_generator.py - 实现正确的授权底仓生成公式",
+            "status": "pending",
+            "details": "实现：停牌 B_T=0, Ledger>0: B_T=⌈min(R, R·r + Ledger⁺)⌉₂₀₀, 其他：B_T=⌊R·r⌋₁₀₀"
+        },
+        {
+            "priority": 2,
+            "task": "新建 src/obligation.py - 平仓义务计算",
+            "status": "pending",
+            "details": "实现公式：Obl_T = Obl_{T-1} × AF_T + E_T，处理规则 3 触发后归零"
+        },
+        {
+            "priority": 3,
+            "task": "新建 src/real_position_calc.py - 真实持仓计算",
+            "status": "pending",
+            "details": "实现公式：R_T = V_T + Ledger_T"
+        },
+        {
+            "priority": 4,
+            "task": "重构 src/position_calc.py - 仓位计算逻辑",
+            "status": "pending",
+            "details": "区分三种持仓：虚拟持仓 V_T、真实持仓 R_T、策略基底 Base_T"
+        }
+    ],
+    "current_task": null,
+    "last_claude_output": null
+}
