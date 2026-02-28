@@ -277,14 +277,24 @@ class AuthGenerator:
             risk_config = {}
 
         for pos in positions:
-            # 提取公共字段
-            stock_code = getattr(pos, 'stock_code', pos.get('stock_code', ''))
-            stock_name = getattr(pos, 'stock_name', pos.get('stock_name', ''))
-            account_id = getattr(pos, 'account_id', pos.get('account_id', ''))
-            market_id = getattr(pos, 'market_id', pos.get('market_id', ''))
-            total_volume = getattr(pos, 'total_volume', pos.get('total_volume', 0))
-            available_volume = getattr(pos, 'available_volume', pos.get('available_volume', 0))
-            current_price = getattr(pos, 'current_price', pos.get('current_price', 0.0))
+            # 提取公共字段 - 支持对象和字典两种形式
+            if isinstance(pos, dict):
+                stock_code = pos.get('stock_code', '')
+                stock_name = pos.get('stock_name', '')
+                account_id = pos.get('account_id', '')
+                market_id = pos.get('market_id', '')
+                total_volume = pos.get('total_volume', 0)
+                available_volume = pos.get('available_volume', 0)
+                current_price = pos.get('current_price', 0.0)
+            else:
+                # 对象形式
+                stock_code = getattr(pos, 'stock_code', '')
+                stock_name = getattr(pos, 'stock_name', '')
+                account_id = getattr(pos, 'account_id', '')
+                market_id = getattr(pos, 'market_id', '')
+                total_volume = getattr(pos, 'total_volume', 0)
+                available_volume = getattr(pos, 'available_volume', 0)
+                current_price = getattr(pos, 'current_price', 0.0)
 
             # 获取个股风险配置
             stock_risk = risk_config.get(stock_code, {})
