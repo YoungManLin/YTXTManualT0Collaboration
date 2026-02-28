@@ -50,11 +50,11 @@
    - 订单输出格式
    - 基于仓位生成
 
-### 等待中的文档
+### 已就位的设计文档 ✅
 
-- [ ] **CCTJ 仓位文件格式** - 核心！
-- [x] 迅投 PB-DBF 预埋单参数说明文档 V2.15
-- [ ] T0 实施方案详细设计
+- [x] **手动 T0 实施方案** - `docs/手动 T0 实施方案.docx`
+- [x] **迅投 PB-DBF 预埋单参数说明文档 V2.15** - `docs/迅投 PB-DBF 预埋单参数说明文档 V2.15.xlsx`
+- [ ] **CCTJ 仓位文件格式** - 等待中，核心！
 
 ---
 
@@ -143,15 +143,20 @@ YTXTManualT0Collaboration/
 
 ## 🔗 重要链接
 
-### 设计文档
-- **飞书 Wiki**: https://zwtkt4hydpt.feishu.cn/wiki/Uj7pwYKiliQcb2k0W7gcis4pnde
-- **迅投 DBF 文档**: 已上传 Excel
+### 设计文档（本地）
+- **手动 T0 实施方案**: `docs/手动 T0 实施方案.docx` ✅
+- **迅投 PB-DBF 参数说明**: `docs/迅投 PB-DBF 预埋单参数说明文档 V2.15.xlsx` ✅
+- **文档说明**: `docs/README.md`
+
+### 设计文档（飞书 Wiki）
+- **Wiki 链接**: https://zwtkt4hydpt.feishu.cn/wiki/Uj7pwYKiliQcb2k0W7gcis4pnde
 
 ### 代码仓库
 - **GitHub**: https://github.com/YoungManLin/YTXTManualT0Collaboration
 
 ### 开发工具
 - **Claude Code**: `/home/admin/.openclaw/workspace/tools/claude-code.sh`
+- **使用方式**: `./tools/claude-code.sh run "任务" --project /home/admin/.openclaw/workspace/YTXTManualT0Collaboration`
 
 ---
 
